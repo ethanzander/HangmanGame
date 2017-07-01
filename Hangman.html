@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HANGMAN GAME</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Theme override CSS -->
+	<link rel="stylesheet" type="text/css" href="hangmanstyle.css">
+	<!-- Mobile First -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+	<div class="header col-md-12 text-center">
+		<h1>Let's Play Hangman!</h1>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div id="instructions" class="col-md-11">
+				<h4>How to play: Choose a letter you think is in the word. Press that letter on your keyboard. If it is correct you will see it displayed above. If it is incorrect you will see a mark against your # of tries. Are you ready? Press start to play.</h4>
+			</div>
+			<div class="row">
+				<div id="buttons" class="col-md-12 text-center">
+					<button id="start-button">Start</button> 
+					<button id="play-again-button">Play Again</button>
+				</div>
+			</div>
+		</div>
+		<div class="row game-area">
+			<div id="your-word" class="col-md-6 text-center">
+				<h4>Your word to guess is:</h4>
+				<p><strong id="random-word"></strong></p>
+			</div>
+			<div id="your-guesses" class="col-md-6 text-center">
+				<div class="row">
+					<div id="player-input" class="text-center">
+						<input type="text" maxlength="1" id="guess" placeholder="Guess a letter here.">
+						<h4>Letters already guessed:</h4>
+						<p><strong id="letters-guessed"></strong></p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="tries-left">
+				<h3>Tries left = </h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="end">
+				<h2 id="end-game-win"></h2>
+				<h2 id="end-game-lost"></h2>
+				<h4 id="end-game-message"></h4>
+			</div>
+		</div>
+	<!--END CONTAINER-->
+	</div>
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+ 
+ 
+	<script type="text/javascript" src="hangmanlogic.js"></script>
+</body>
+</html>
